@@ -1,0 +1,72 @@
+
+  <div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+        <h1>Register Yourself</h1>
+        <div *ngIf="response">
+          <div class="alert alert-danger text-center p-2">{{response.error}}</div>
+          <div class="alert alert-primary text-center p-2">{{response.success}}</div>
+        </div>
+        <br>
+				<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+					<input class="form-control" type="text" formControlName="name" id="name" placeholder="Name">
+          <div *ngIf="registerForm.controls['name'].invalid && (registerForm.controls['name'].dirty || registerForm.controls['name'].touched)" class="">
+            <div *ngIf="registerForm.controls['name'].errors?['required']:''">
+              <b><p class="text-left error">Name is required.</p></b>
+            </div>
+          </div>
+          <br>
+          <input class="form-control" type="date" formControlName="dob" id="dob" placeholder="Date Of Birth">
+          <div *ngIf="registerForm.controls['dob'].invalid && (registerForm.controls['dob'].dirty || registerForm.controls['dob'].touched)" class="">
+            <div *ngIf="registerForm.controls['dob'].errors?['required']:''">
+              <b><p class="text-left error">Date of Birth is required.</p></b>
+            </div>
+          </div>
+          <br>
+          <input class="form-control" type="number" formControlName="mobno" placeholder="Mobile Number">
+          <div *ngIf="registerForm.controls['mobno'].invalid && (registerForm.controls['mobno'].dirty || registerForm.controls['mobno'].touched)" class="">
+            <div *ngIf="registerForm.controls['mobno'].errors?['required']:''">
+              <b><p class="text-left error">Mobile Number is required.</p></b>
+            </div>
+          </div>
+          <br>
+          <input class="form-control" type="email" formControlName="email" placeholder="Email ID">
+          <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="">
+            <div *ngIf="registerForm.controls['email'].errors?['required']:''">
+              <strong><p class="text-left error">Email ID is required.</p></strong>
+            </div>
+          </div>
+          <br>
+					<input class="form-control" type="password" formControlName="pass" placeholder="Password">
+          <div *ngIf="registerForm.controls['pass'].invalid && (registerForm.controls['pass'].dirty || registerForm.controls['pass'].touched)" class="">
+            <div *ngIf="registerForm.controls['pass'].errors?['required']:''">
+              <b><p class="text-left error">Password is required.</p></b>
+            </div>
+          </div>
+          <br>
+					<input class="form-control" type="password" formControlName="confirm_pass" placeholder="Confirm Password">
+          <div *ngIf="registerForm.controls['confirm_pass'].invalid && (registerForm.controls['confirm_pass'].dirty || registerForm.controls['confirm_pass'].touched)" class="">
+            <div *ngIf="registerForm.controls['confirm_pass'].errors?['required']:''">
+              <b><p class="text-left error">Password and Confirm Password does not match!</p></b>
+            </div>
+          </div>
+					<input class="btn btn-default" type="submit" value="Register">
+				</form>
+			</div>
+		</div>
+		<!-- copyright -->
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->

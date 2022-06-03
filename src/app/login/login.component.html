@@ -1,0 +1,42 @@
+
+  <div class="main-w3layouts wrapper">
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+        <h1>Log In</h1>
+        <br>
+        <p>{{message}}</p>
+				<form [formGroup]="loginForm" (ngSubmit)="login()" novalidate>
+					<input class="form-control" formControlName="userid" type="text" placeholder="Enter Username" />
+          <div *ngIf="loginForm.controls['userid'].invalid && (loginForm.controls['userid'].dirty || loginForm.controls['userid'].touched)" class="">
+            <div *ngIf="loginForm.controls['userid'].errors?['required']:''">
+              <b><p class="text-left error">username is required.</p></b>
+            </div>
+          </div>
+          <br>
+          <input class="form-control" formControlName="password" type="password" placeholder="Enter Password" />
+          <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="">
+            <div *ngIf="loginForm.controls['password'].errors?['required']:''">
+              <b><p class="text-left error">Password is required.</p></b>   
+            </div>
+          </div>
+					<input class="btn btn-default" type="submit" value="Login">
+				</form>
+			</div>
+		</div>
+		<!-- copyright -->
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+ 
