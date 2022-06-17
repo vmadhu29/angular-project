@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';  
 import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Component({
@@ -8,10 +9,12 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 })
 export class UserComponent implements OnInit {
   response: any;
+  res_msg: any;
   success: any;
   error!: string;
   dtOptions: DataTables.Settings = {};
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,
+    private router : Router) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:8000/api/get-users').subscribe( res => {
@@ -35,4 +38,13 @@ export class UserComponent implements OnInit {
    
   }
 
+  onClick(event: any) {
+    let Params = new HttpParams();
+    Params = Params.append('firstParameter', event);
+    return this.http.post('http://localhost:8000/api/del-user',{
+          params: { params: Params }
+        }).subscribe( res => {
+            this.res_msg = res;
+    })
+  }
 }
