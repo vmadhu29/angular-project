@@ -20,8 +20,16 @@
     "@angular/platform-browser": "~13.0.0-next.0",
     "@angular/platform-browser-dynamic": "~13.0.0-next.0",
     "@angular/router": "~13.0.0-next.0",
+    "@popperjs/core": "^2.11.5",
+    "angular-datatables": "^13.1.0",
     "bootstrap": "^4.6.1",
+    "bootstrap-icons": "^1.8.3",
+    "cors": "2.8.5",
+    "datatables.net": "^1.12.1",
+    "datatables.net-dt": "^1.12.1",
+    "express": "^4.17.1",
     "jquery": "^3.6.0",
+    "mysql": "2.18.1",
     "ngx-bootstrap": "^8.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "~7.4.0",
@@ -29,10 +37,12 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.0",
+    "@angular-devkit/build-angular": "^13.3.7",
     "@angular/cli": "~13.0.0",
     "@angular/compiler-cli": "~13.0.0-next.0",
+    "@types/datatables.net": "^1.10.22",
     "@types/jasmine": "~3.10.0",
+    "@types/jquery": "^3.5.14",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
@@ -41,5 +51,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.3"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.0.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmadhu29/angular-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vmadhu29/angular-project/issues"
+  },
+  "homepage": "https://github.com/vmadhu29/angular-project#readme"
 }

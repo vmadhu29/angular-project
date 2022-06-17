@@ -1,0 +1,17 @@
+.card {
+    background: #4B0082;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #4B0082, #881ad6);
+    background: -moz-linear-gradient(to top, #4B0082, #4B0082);
+    background: -o-linear-gradient(to top, #4B0082, #4B0082);
+    background: linear-gradient(to top, #002882, #2b948f);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+ .card-header{
+    font-size: large;
+    color: white;
+ }
+  

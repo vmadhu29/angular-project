@@ -1,0 +1,31 @@
+<div class="main-w3layouts wrapper">
+	<div class="main-agileinfo">
+		<div class="agileits-top">
+			<h1>USERS LIST</h1>
+      <br>
+      <table class="table table-striped table-bordered row-border hover" id="datatable">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th class="text-center" scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of Books; let i = index">
+            <th scope="row">{{book._id}}</th>
+            <td>{{book.name}}</td>
+            <td>{{book.price}}</td>
+            <td>{{book.description}}</td>
+            <td class="text-center">
+              <button class="btn btn-sm btn-primary" routerLink="/edit-book/{{book._id}}">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="delete(book._id, i)">Delete</button>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+    </div>
+  </div>
+</div>        

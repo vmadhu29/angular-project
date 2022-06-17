@@ -12,7 +12,14 @@ import { AboutComponent } from './about/about.component';
 import { AdminComponent } from './admin/admin.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AuthGuard } from './guards/auth.guard'; 
+import { AuthGuard } from './guards/auth.guard';
+import { ContactComponent } from './contact/contact.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
+import { BookDetailComponent } from './components/book-detail/book-detail.component';
+import { BooksListComponent } from './components/books-list/books-list.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserComponent } from './user/user.component'; 
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -24,6 +31,12 @@ import { AuthGuard } from './guards/auth.guard';
     AdminComponent,
     RegistrationComponent,
     DashboardComponent,
+    ContactComponent,
+    AddBookComponent,
+    BookDetailComponent,
+    BooksListComponent,
+    AdminDashboardComponent,
+    UserComponent,
    
     
    
@@ -34,6 +47,7 @@ import { AuthGuard } from './guards/auth.guard';
     HttpClientModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    DataTablesModule,
   ],
   providers: [AuthGuard],    
   bootstrap: [AppComponent]
